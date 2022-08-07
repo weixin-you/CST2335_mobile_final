@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioWorkplace/CST2335_mobile_final/app/src/main/res/layout/activity_food_nutri_database.xml" value="0.2171875" />
-        <entry key="..\:/AndroidStudioWorkplace/CST2335_mobile_final/app/src/main/res/layout/fragment_details_photo.xml" value="0.2171875" />
-        <entry key="..\:/AndroidStudioWorkplace/CST2335_mobile_final/app/src/main/res/layout/list_item.xml" value="0.2171875" />
-        <entry key="..\:/AndroidStudioWorkplace/CST2335_mobile_final/app/src/main/res/layout/list_items.xml" value="0.2171875" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2085" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/activity_pexels.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/pexels_nav_header.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/menu/drawer.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/menu/toolbar.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>

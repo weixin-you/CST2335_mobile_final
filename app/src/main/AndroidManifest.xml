@@ -14,13 +14,7 @@
         android:theme="@style/Theme.Mobilefinal"
         tools:targetApi="31">
         <activity
-            android:name=".MyOpenHelper"
-            android:exported="false" />
-        <activity
-            android:name=".FoodNutritionDatabase"
-            android:exported="false" />
-        <activity
-            android:name=".DetailsPhoto"
+            android:name=".Pexels"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
