@@ -14,13 +14,7 @@
         android:theme="@style/Theme.Mobilefinal"
         tools:targetApi="31">
         <activity
-            android:name=".EmptyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DisplayData"
-            android:exported="false" />
-        <activity
-            android:name=".CocktailDatabase"
+            android:name=".Pexels"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
