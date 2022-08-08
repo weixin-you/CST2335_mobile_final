@@ -93,6 +93,7 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
 
         loadDataFromDatabase();
         Toolbar myToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(myToolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,myToolbar,
                 R.string.open, R.string.close);

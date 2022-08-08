@@ -16,6 +16,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.drawerlayout.widget.DrawerLayout
+
         android:id="@+id/drawer"
         android:layout_width="203dp"
         android:layout_height="402dp"
