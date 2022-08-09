@@ -55,6 +55,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * This class defines elements used in this activity
+ */
 public class Pexels extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private EditText searchField;
     private Button searchButton;
@@ -69,6 +72,9 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
     MyOpenHelper MyOpener;
     static MyListAdapter myListAdapter;
 
+    /**
+     * This class define the data structure for use in storing data to database
+     */
     public static class Image {
         String imageUrl;
         long id;
@@ -85,6 +91,10 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
         }
     }
 
+    /**
+     * This function works as the entry for this activity
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -130,8 +140,6 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
                     .create().show();
         });
 
-
-
         if (android.os.Build.VERSION.SDK_INT > 9) {
             StrictMode.ThreadPolicy gfgPolicy =
                     new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -147,6 +155,9 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
         });
     }
 
+    /**
+     * This class is used to deal with async tasks
+     */
     private class MyHTTPRequest extends AsyncTask< String, Integer, String> {
         private Bitmap image;
         private String authorName;
@@ -184,12 +195,20 @@ public class Pexels extends AppCompatActivity implements NavigationView.OnNaviga
             return "Done";
         }
 
+        /**
+         * Update the activity that is in progress
+         * @param args the input array of items
+         */
         public void onProgressUpdate(Integer ... args) {
             Log.i("Activity", "Update: " + args[0]);
             progressBar.setVisibility(View.VISIBLE);
             progressBar.setProgress(args[0]);
         }
-        //Type3
+
+        /**
+         * Execute this block of code after the query is executed
+         * @param fromDoInBackground the input parameter
+         */
         public void onPostExecute(String fromDoInBackground)
         {
             Log.i("HTTP", fromDoInBackground);

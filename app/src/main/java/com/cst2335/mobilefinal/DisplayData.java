@@ -34,6 +34,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is used to define data to be displayed on UI
+ */
 public class DisplayData extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
@@ -63,8 +66,6 @@ public class DisplayData extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        Log.i("obj", String.valueOf(photoInfoList.size()));
-
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -73,9 +74,10 @@ public class DisplayData extends AppCompatActivity {
         recyclerView.setAdapter(recyclerAdapter);
     }
 
+    /**
+     * Adaptor used to synchronize data
+     */
     public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
-
-        // private Bitmap[] localDataSet;
         private List<PhotoInfo> dataSet;
         private Context mContext;
         public String imageF;
@@ -109,7 +111,6 @@ public class DisplayData extends AppCompatActivity {
 
         /**
          * Initialize the dataset of the Adapter.
-         *
          * @param dataSet String[] containing the data to populate views to be used
          * by RecyclerView.
          */
@@ -132,9 +133,10 @@ public class DisplayData extends AppCompatActivity {
         @Override
         public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
-            // Get element from your dataset at this position and replace the
-            // contents of the view with that element
-
+            /**
+             * Get element from your dataset at this position and replace the
+             * contents of the view with that element
+             */
             viewHolder.getTextView().setText(dataSet.get(position).getPhotographerName());
             Picasso.get()
                     .load(dataSet.get(position).getImageUrl())
@@ -166,7 +168,10 @@ public class DisplayData extends AppCompatActivity {
 
         }
 
-        // Return the size of your dataset (invoked by the layout manager)
+        /**
+         *
+         * @return Return the size of your dataset (invoked by the layout manager)
+         */
         @Override
         public int getItemCount() {
             return dataSet.size();

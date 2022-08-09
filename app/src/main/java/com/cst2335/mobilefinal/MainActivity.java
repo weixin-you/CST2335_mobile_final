@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * @param item: returns the message inside the item depending on which item the user selected.
-     *              also if songster is clicked it will for to the songster navigation page
+     * also if songster is clicked it will for to the songster navigation page
      * @return returns true.
      */
     @Override

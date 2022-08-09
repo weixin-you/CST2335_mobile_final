@@ -49,7 +49,6 @@ public class DetailsPhoto extends Fragment {
     private SQLiteDatabase sqLiteDatabase;
 
     public DetailsPhoto() {
-        // Required empty public constructor
     }
 
     @Override
@@ -76,7 +75,6 @@ public class DetailsPhoto extends Fragment {
             e.printStackTrace();
         }
 
-
         TextView height = (TextView)result.findViewById(R.id.height);
         height.setText(String.valueOf(dataFromActivity.getInt("heightF")));
         TextView width = (TextView)result.findViewById(R.id.width);
@@ -90,7 +88,6 @@ public class DetailsPhoto extends Fragment {
             startActivity(i);
         });
 
-
         Button saveToFavorite = (Button)result.findViewById(R.id.favorite);
         saveToFavorite.setOnClickListener(click -> {
             String url_image=dataFromActivity.getString("imageUrlF");
@@ -99,6 +96,8 @@ public class DetailsPhoto extends Fragment {
             Pexels.myListAdapter.notifyDataSetChanged();
             long id =sqLiteDatabase.insert( MyOpenHelper.TABLE_NAME, null, newRow );
             Log.i("insert to db", "Add a photoUrl to database");
+            Intent intent = new Intent(getActivity(), Pexels.class);
+            startActivity(intent);
         });
         return result;
     }
